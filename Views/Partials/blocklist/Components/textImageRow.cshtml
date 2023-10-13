@@ -1,9 +1,9 @@
 @inherits UmbracoViewPage<BlockListItem>
 
     @{
-        var row = (TextAndImageRow)Model.Content;
+        var row = (TextImageRow)Model.Content;
         if(row.Image == null) return;
-        var settings = (TextAndImageRowSettings)Model.Settings;
+        var settings = (TextImageRowSettings)Model.Settings;
         if(settings?.Hide ?? false) { return; }
     }
 
