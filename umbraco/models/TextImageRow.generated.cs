@@ -18,7 +18,7 @@ using Umbraco.Extensions;
 
 namespace Umbraco.Cms.Web.Common.PublishedModels
 {
-	/// <summary>Text & Image Row</summary>
+	/// <summary>Text Image Row</summary>
 	[PublishedModel("textImageRow")]
 	public partial class TextImageRow : PublishedElementModel
 	{
