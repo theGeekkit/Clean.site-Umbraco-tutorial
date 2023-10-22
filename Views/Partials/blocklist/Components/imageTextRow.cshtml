@@ -1,18 +1,18 @@
 @inherits UmbracoViewPage<BlockListItem>
 
     @{
-        var row = (ImageAndTextRow)Model.Content;
+        var row = (ImageTextRow)Model.Content;
         if(row.Image == null) return;
-        var settings = (ImageAndTextRowSettings)Model.Settings;
+        var settings = (ImageTextRowSettings)Model.Settings;
         if(settings?.Hide ?? false) { return; }
     }
 
     <div class="row gx-4 gx-lg-5 justify-content-center">
         <div class="col-md-10 col-lg-8 col-xl-7">
-            <img class="img-fluid" src="@row.Image.Url()" alt="@row.Caption">
+            <img class="img-fluid" src="@row.Image.Url()">
         </div>
         <div>
-            @row.Content
+            @row.RichText
         </div>    
     </div>
 
